@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout1</title>
+    <style>
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            width: 1000px;
+            height: 100px;
+            background: #111;
+        }
+        nav {
+            width: 1000px;
+            height: 100px;
+            background: #222;
+        }
+        aside {
+            width: 300px;
+            height: 600px;
+            background: #333;
+            float: left;
+        }
+        section {
+            width: 700px;
+            height: 600px;
+            background: #444;
+            float: left;
+        }
+        footer {
+            width: 1000px;
+            height: 100px;
+            background: #555;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="wrap">
+        <div class="header"></div>
+        <div class="nav"></div>
+        <div class="side"></div>
+        <div class="contents"></div>
+        <div class="footer"></div>
+    </div> -->
+    
+    <!-- 시멘틱태그 사용 -->
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <aside></aside>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>

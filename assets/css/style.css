@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* 웹 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+/* 레이아웃 */
+#header {
+    background: url(../images/header_bg.jpg);
+}
+
+/* 컨테이너 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.3);
+}
+
+/* 헤더 */
+.header {
+    height: 327px;
+}
+
+.header .header_menu {
+    text-align: right;
+}
+
+.header .header_menu a {
+    color: #fff;
+    font-family: 'Abel', sans-serif;
+    text-transform: capitalize;
+    padding: 8px 0 6px 10px;
+    /* 패딩값이 적용되기 위해 inline-block 사용 */
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.header .header_menu a:hover {
+    color: #ccc;
+}
+
+.header .header_tit {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 55px;
+}
+
+.header .header_tit h1 {
+    background: #51b0dc;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    padding: 5px 30px 5px 30px;
+    letter-spacing: 2px;
+    /* :hover시 애니메이션 효과 지정 */
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.header .header_tit h1:hover {
+    /* box-shadow: inset hoff voff blur #000; */
+    box-shadow: inset -9em 0 0 0 #257fac, inset 9em 0 0 0 #257fac;
+}
+
+.header .header_tit a {
+    background: #4a9abf;
+    color: #fff;
+    font-style: 16px;
+    display: inline-block;
+    margin-top: -7px;
+    padding: 10px 20px 10px 20px;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+.header .header_tit a:hover {
+    box-shadow: 0 0 0 5px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
+.header .header_icon {
+    margin-top: 40px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.header .header_icon li {
+    display: inline;
+    margin: 0 2px;
+}
+
+.header .header_icon li a {
+    background-color: #3192bf;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 35px;
+    /* width와 height 적용되게 하려면 block 구조로 바꾸기 */
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.header .header_icon li a:hover {
+    box-shadow: 0 0 03px rgba(75,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
+.header .header_icon li a span {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    background: #3192bf;
+    border-radius: 6px 0;
+    font-size: 12px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    transform: translate(-50%);
+    transition: all 0.3s ease;
+    padding: 3px 9px;
+    opacity: 0;
+}
+
+.header .header_icon li a span::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-left: -5px;
+}
+
+.header .header_icon li a:hover span {
+    opacity: 1;
+    top: -33px;
+}
+
+/* MediaQuery */
+@media (max-width: 1220px) {
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0 15px;
+    }
+}
