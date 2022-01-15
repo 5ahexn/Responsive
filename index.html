@@ -17,6 +17,19 @@
     <link rel="icon" href="./assets/icon/favicon-48.png" sizes="48x48"> 
     <link rel="icon" href="./assets/icon/favicon-64.png" sizes="64x64"> 
     <link rel="icon" href="./assets/icon/favicon-128.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="반응형 사이트 만들기(title)">
+    <meta property="og:url" content="https://5ahexn.github.io/Responsive/">
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="반응형 사이트 만들기">
+    <meta property="og:description" content="반응형 사이트 따라하기">
+    <!-- twitter meta tags -->
+    <meta name="instargram:card" content="summary_large_image">
+    <meta name="instargram:site" content="@wjdtpry">
+    <meta name="instargram:title" content="반응형 사이트 만들기">
+    <meta name="instargram:description" content="반응형 사이트 만들기">
+    <meta property="instargram:image" content="">
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]> 
         <script src="js/html5shiv.min.js"></script>
@@ -24,6 +37,7 @@
             alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
         </script>
     <![endif]-->
+    <!-- html5shiv 주석 아님 -->
     <!-- Font Awesom CSS -->
     <link type="text/css" rel="stylesheet" href="./assets/css/font-awesome.css">
     <!-- Reset CSS -->
@@ -51,21 +65,95 @@
                         <ul>
                             <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>html5</span></a></li>
                             <li><a href="#"><i class="fa fa-css3" aria-hidden="true"></i><span>css3</span></a></li>
-                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>github</span></a></li>
-                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>instargram</span></a></li>
+                            <li><a href="#" class="github"><i class="fa fa-github" aria-hidden="true"></i><span>github</span></a></li>
+                            <li><a href="#" class="instargram"><i class="fa fa-instagram" aria-hidden="true"></i><span>instargram</span></a></li>
                         </ul>
                     </div>
+                    <!-- // header_icon -->
+                    <!-- 
+                        https://developers.facebook.com/tools/debug/
+                        https://cards-dev.twitter.com/validator
+                    -->
                 </div>
             </div>
         </div>
     </header>
     <!-- // header -->
-    <nav>
-        <h2>반응형 사이트 전체 메뉴</h2>
+
+    <nav id="nav">
+        <div class="container">
+            <div class="row">
+                <div class="nav">
+                    <h2 class="ir_su">반응형 사이트 전체 메뉴</h2>
+                    <div>
+                        <h3>HTML Reference</h3>
+                        <ol>
+                            <li><a href="#">HTML 태그(Tag)</a></li>
+                            <li><a href="#">블록 요소/인라인 요소</a></li>
+                            <li><a href="#">DTD 선언</a></li>
+                            <li><a href="#">언어 속성 설정</a></li>
+                            <li><a href="#">HTML &lt;title&gt;</a></li>
+                            <li><a href="#">HTML &lt;meta&gt;</a></li>
+                            <li><a href="#">특수문자</a></li>
+                            <li><a href="#">하이퍼 링크</a></li>
+                            <li><a href="#">HTML &lt;style&gt;</a></li>
+                            <li><a href="#">HTML &lt;html&gt;</a></li>
+                            <li><a href="#">HTML &lt;head&gt;</a></li>
+                            <li><a href="#">HTML &lt;div&gt;</a></li>
+                            <li><a href="#">HTML &lt;colgroup&gt;</a></li>
+                            <li><a href="#">HTML &lt;caption&gt;</a></li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>CSS  Reference</h3>
+                        <ol>
+                            <li><a href="#">CSS 선택자</a></li>
+                            <li><a href="#">CSS 단위</a></li>
+                            <li><a href="#">CSS 색상</a></li>
+                            <li><a href="#">CSS 선언 방법</a></li>
+                            <li><a href="#">상대주소와 절대주소</a></li>
+                            <li><a href="#">CSS float</a></li>
+                            <li><a href="#">이미지 표현 방법</a></li>
+                            <li><a href="#">이미지 스프라이트</a></li>
+                            <li><a href="#">IR 효과</a></li>
+                            <li><a href="#">이미지 최적화</a></li>
+                            <li><a href="#">background-color</a></li>
+                            <li><a href="#">border-style</a></li>
+                            <li><a href="#">font-size</a></li>
+                            <li><a href="#">text-align</a></li>
+                        </ol>
+                    </div>
+                    <div class="last">
+                        <h3>Webstandard</h3>
+                        <ol>
+                            <li><a href="#">웹 표준</a></li>
+                            <li><a href="#">웹 접근성</a></li>
+                            <li><a href="#">W3C</a></li>
+                            <li><a href="#">웹 접근성 연구소</a></li>
+                            <li><a href="#">네이버 널리</a></li>
+                            <li><a href="#">다음 다룸</a></li>
+                            <li><a href="#">Webstandard</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
     </nav>
-    <article>
-        <h2>반응형 서브 타이틀</h2>
+    <!-- // nav -->
+
+    <article id="title">
+        <div class="container">
+            <div class="title">
+                <h2>"나는 퍼블리셔다!"</h2>
+                <a href="#" class="btn">
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <span class="ir_su">전체메뉴 보기</span>
+                </a>
+            </div>
+        </div>
     </article>
+    <!-- // title -->
+
     <main>
         <section>
             <h2>반응형 사이트 컨텐츠</h2>
@@ -89,12 +177,16 @@
             </section>
         </section>
     </main>
+    <!-- // main -->
+
     <footer>
         <h2>반응형 사이트 푸터</h2></h2>
     </footer>
+    <!-- // footer -->
     
     <!-- JavaScript Librarries -->
     <script type="text/javaScript" src="./assets/js/jquery.min_1.12.4.js"></script>
     <script type="text/javaScript" src="./assets/js/modernizr-custom.js"></script>
+    <script type="text/javaScript" src="./assets/js/main.js"></script>
 </body>
 </html>
