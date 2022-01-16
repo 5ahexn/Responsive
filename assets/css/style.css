@@ -21,6 +21,38 @@ body {
     background-color: #eaf7fd;
 }
 
+#contents .container {
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    position: relative;
+}
+
+#cont_left {
+    float: left;
+    width: 250px;
+}
+
+#cont_center {
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    min-height: 1300px;
+    /* #cont_left의 영역 설정 float의 부작용*/
+    margin-right: 250px;
+    /* #cont_right의 영역 설정 float의 부작용*/
+    overflow: hidden;
+}
+
+#cont_right {
+    width: 250px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#footer {
+    border-top: 1px solid #dbdbdb;
+}
+
 /* 컨테이너 */
 .container {
     width: 1200px;
@@ -251,6 +283,207 @@ body {
     box-shadow: 0 0 0 3px rgba(71,154,191,0.9) inset, 0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
+/* 컨텐츠 영역 */
+.column {
+    border-bottom: 1px solid #dbdbdb;
+    padding: 15px;
+}
+
+.column .col_tit {
+    color: #2f7fa6;
+    font-size: 20px;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.column .col_desc {
+    border-bottom: 1px dashed #dbdbdb;
+    color: #878787;
+    line-height: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+/* 메뉴 */
+.column.col1 .menu ul li {
+    position: relative;
+}
+
+.column.col1 .menu ul li a {
+    border-bottom: 1px solid #dbdbdb;
+    color: #878787;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    transition: box-shadow 0.34s ease, background 0.34s ease;
+}
+
+.column.col1 .menu ul li a i {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.column.col1 .menu ul li a:hover {
+    box-shadow: inset 180px 0 0 0 rgba(36,130,174,0.7);
+    background: rgba(36,130,174,0.9);
+    color: #fff;
+}
+
+/* 게시판1 */
+.column.col2 .notice1 {
+    position: relative;
+}
+
+.column.col2 .notice1 h5 {
+    color: #2f7fa6;
+    font-size: 14px;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.column.col2 .notice1 ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+    padding-left: 8px;
+}
+
+.column.col2 .notice1 ul li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #449ce2;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.column.col2 .notice1 .more {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: #878787;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+/* 게시판2 */
+.column.col2 .notice2 {
+    position: relative;
+}
+
+.column.col2 .notice2 h5 {
+    color: #2f7fa6;
+    font-size: 14px;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.column.col2 .notice2 ul li {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* IE 버전 */
+    min-height: 35px;
+    /* Vendor Prefix */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    position: relative;
+    padding-left: 8px;
+    padding-bottom: 4px;
+}
+
+.column.col2 .notice2 ul li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #449ce2;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.column.col2 .notice2 .more {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    color: #878787;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.column.col3 {
+    border-bottom: 0;
+}
+
+/* 블로그1 */
+.column.col3 .blog1 figure img {
+    width: 100%;
+}
+
+.column.col3 .blog1 figure .img-retina {
+    display: none;
+}
+
+/* 해상도에 따른 이미지 비율 첫번째 방법 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 1.5dppx) {
+        .column.col3 .blog1 .img-retina {display: initial;}
+        .column.col3 .blog1 .img-normal {display: none;}
+}
+
+/* 블로그2 */
+.column.col3 .blog2 h5 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 30px 30px;
+}
+
+.column.col3 .blog2 p {
+    padding-top: 5px;
+}
+
+.column.col3 .blog2 .img-retina {
+    background-image: url(../images/blog4_@1.jpg);
+    background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 2dppx) {
+        .column.col3 .blog2 .img-retina {
+            background-image: url(../images/blog4_@2.jpg);
+        }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+        only screen and (min-device-pixel-ratio: 3),
+        only screen and (min-resolution: dppx) {
+        .column.col3 .blog2 .img-retina {
+            background-image: url(../images/blog4_@3.jpg);
+        }
+}
+
+.column.col4 {}
+.column.col5 {}
+
+.column.col6 {
+    border-bottom: 0;
+}
+.column.col7 {}
+.column.col8 {}
+
+.column.col9 {
+    border-bottom: 0;
+}
+
 /* MediaQuery */
 /* 화면 너비 0 ~ 1220px */
 @media (max-width: 1220px) {
@@ -260,6 +493,10 @@ body {
 
     .row {
         padding: 0 15px;
+    }
+
+    #contents .container {
+        border: 0;
     }
 
     .title .btn {
@@ -272,6 +509,17 @@ body {
 
 /* 화면 너비  0 ~ 960px */
 @media (max-width: 960px) {
+    #cont_center {
+        border-right: 0;
+        margin-right: 0;
+    }
+
+    #cont_right {
+        position: static;
+        border-top: 1px solid #dbdbdb;
+        width: 100%;
+    }
+
     .nav > div {
         float: none;
         width: 100%;
@@ -295,7 +543,16 @@ body {
 }
 
 /* 화면 너비  0 ~ 768px */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    #cont_left {
+        float: none;
+        width: 100%;
+    }
+
+    #cont_center {
+        border-left: 0;
+    }
+}
 
 /* 화면 너비  0 ~ 600px */
 @media (max-width: 600px) {
@@ -321,6 +578,57 @@ body {
 
     .nav > div:last-child li {
         width: 50%;
+    }
+
+    .column.col1 {
+        border-bottom: 0;
+        padding: 0;
+    }
+
+    .column.col1 .col_tit {
+        display: none;
+    }
+
+    .column.col1 .col_desc {
+        display: none;
+    }
+
+    .column.col1 .menu ul {
+        overflow: hidden;
+    }
+
+    .column.col1 .menu ul li {
+        border-right: 1px solid #dbdbdb;
+        box-sizing: border-box;
+        float: left;
+        text-align: center;
+        width: 33.3333%;
+    }
+
+    .column.col1 .menu ul li:nth-child(3n) {
+        border-right: 0;
+    }
+
+    .column.col1 .menu ul li a {
+        color: #fff;
+        text-shadow: 0 0 5px rgba(0,0,0,0.7);
+    }
+
+    .column.col1 .menu ul li a:hover {
+        background: rgba(36,130,174,0.3);
+        box-shadow: none;
+    }
+
+    .column.col1 .menu ul li i {
+        display: none;
+    }
+
+    .column.col2 {
+        background: #fff;
+    }
+
+    .column.col4 {
+        border-top: 1px solid #dbdbdb;
     }
 }
 
