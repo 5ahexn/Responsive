@@ -471,7 +471,124 @@ body {
         }
 }
 
-.column.col4 {}
+/* 이미지 슬라이드 */
+.column.col4 .slider figure {
+    position: relative;
+}
+
+.column.col4 .slider figcaption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 18px;
+}
+
+.column.col4 .slider figcaption em {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Abel', sans-serif;
+    opacity: 0;
+    transition: all .84s ease;
+    transform: translateX(50px);
+}
+
+.column.col4 .slider figcaption span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .84s .2s ease;
+    transform: translateX(50px);
+}
+
+.column.col4 .slider .slick-active figcaption em {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.column.col4 .slider .slick-active figcaption span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.column.col4 .slider .slick-dots {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.column.col4 .slider .slick-dots li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+
+.column.col4 .slider .slick-dots li button {
+    display: block;
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    line-height: 0;
+    background: #5dbfeb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.column.col4 .slider .slick-dots li.slick-active button {
+    background: #2b91c8;
+}
+
+.column.col4 .slider .slick-prev {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1000;
+    text-indent: -9999px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.column.col4 .slider .slick-prev::before {
+    content: '\f053';
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute;
+    top: 8px;
+    left: 9px;
+}
+
+.column.col4 .slider .slick-next {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1000;
+    text-indent: -9999px;
+    font: normal normal normal 14px/1 FontAwesome;
+}
+
+.column.col4 .slider .slick-next::before {
+    content: '\f054';
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+}
+
 .column.col5 {}
 
 .column.col6 {
@@ -629,6 +746,18 @@ body {
 
     .column.col4 {
         border-top: 1px solid #dbdbdb;
+    }
+
+    .column.col4 .slider figcaption {
+        padding: 10px;
+    }
+
+    .column.col4 .slider figcaption em {
+        font-size: 18px;
+    }
+
+    .column.col4 .slider figcaption span {
+        font-size: 14px;
     }
 }
 
