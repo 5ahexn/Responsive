@@ -65,8 +65,27 @@ button {
 }
 
 /* 반응형 이미지 */
-img {
+img,
+video {
     width: 100%;
+}
+
+/* Clearfix */
+.clearfix {
+    zoom: 1;
+    /* IE 7,8 지원 */
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+    line-height: 0;
+}
+
+.clearfix::after {
+    clear: both;
+    /* float의 성질 차단 */
 }
 
 /* IR 효과 */
